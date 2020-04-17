@@ -100,7 +100,7 @@ class BaseOrbitPlotter:
         radius = min(
             self._attractor_radius * 0.5, (norm(position) - self._attractor.R) * 0.5
         )  # Arbitrary thresholds
-        self._draw_point(radius, colors[0], label, center=position)
+        return self._draw_point(radius, colors[0], label, center=position)
 
     def __plot_coordinates_and_position(self, trajectory):
         coordinates, position, label, colors, dashed = trajectory
